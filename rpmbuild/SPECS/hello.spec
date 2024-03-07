@@ -1,13 +1,13 @@
 Name:		hello
-Version:        0.0.1
-Release:        1%{?dist}
-Summary:   	A trivial bash script.
-BuildArch: 	noarch        
+Version:	0.0.1
+Release:	1%{?dist}
+Summary:	A trivial bash script.
+BuildArch:	noarch        
 
-License:        GPL
-Source0:        %{name}-%{version}.tar.gz
+License:	GPL
+Source0:	%{name}-%{version}.tar.gz
 
-Requires:       bash
+Requires:	bash
 
 %description
 A demo RPM build.
