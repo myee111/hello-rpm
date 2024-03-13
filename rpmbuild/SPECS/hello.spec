@@ -15,10 +15,14 @@ A demo RPM build.
 %prep
 %setup -q
 
+%build
+
 %install
-rm -rf $RPM_BUILD_ROOT
-mkdir -p $RPM_BUILD_ROOT/%{_bindir}
-cp %{name}.sh $RPM_BUILD_ROOT/%{_bindir}
+#rm -rf $RPM_BUILD_ROOT
+#mkdir -p $RPM_BUILD_ROOT/%{_bindir}
+#cp %{name}.sh $RPM_BUILD_ROOT/%{_bindir}
+#chmod 4755 $RPM_BUILD_ROOT/%{_bindir}/%{name}.sh
+install -D -p -m 4755 %{name}.sh $RPM_BUILD_ROOT/%{_bindir}/%{name}.sh
 
 %clean
 rm -rf $RPM_BUILD_ROOT
